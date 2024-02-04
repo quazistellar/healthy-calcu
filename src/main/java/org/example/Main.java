@@ -17,7 +17,7 @@ public class Main {
         System.out.print("Введите свой текущий вес: ");
         double weight = sc.nextDouble();
 
-        System.out.print("Введите свой текущий рост (в метрах): ");
+        System.out.print("Введите свой текущий рост (в сантиметрах): ");
         double heightCM = sc.nextDouble();
         double height = heightCM / 100.0;
 
@@ -33,7 +33,7 @@ public class Main {
 
         double weight_diff = weight - perfect_weight;
 
-        // Формула Харрисона-Бенедикта: 655,1 + (9.6 х массу тела в кг) + (1.85 х рост) - (возраст х 4.68)
+        // формула Харрисона-Бенедикта: 655,1 + (9.6 х массу тела в кг) + (1.85 х рост) - (возраст х 4.68)
         double formula = 655.1 + (9.6 * weight) + (1.85 * height) - (age * 4.68);
         int norm = (int)formula;
 
@@ -53,6 +53,7 @@ public class Main {
                     perfect_weight + " Нужно набрать: " + difff + " Рекомендуемый дневной прием калорий: " + (norm+500));
             System.out.println("Индекс массы тела: " + imt);
         }
+
         else {
             System.out.println("Ваш вес находится в пределах нормы. " +
                     " Идеальный вес: " + perfect_weight +
